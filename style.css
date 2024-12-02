@@ -132,6 +132,12 @@ time, mark, audio, video {
 /* css style begin */
 body{
     font-family: "Poppins", sans-serif;
+    background-color: #fbf8f6;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 1px);
+    background-size: 15px 15px;
+    border: 50px solid #fbf8f6; /* Bordure blanche de 10px autour du site */
+    padding: 0px; /* Espace entre le contenu et la bordure */
+    box-sizing: border-box; /* Inclut la bordure dans la taille totale de l'élément */
 }
 .header ul{
     display: flex;
@@ -143,7 +149,7 @@ body{
     margin-top: 30px;
 }
 .header ul li a{
-    font-size: 25px;
+    font-size: 16px;
     color: black;
     font-weight: 500;
     font-style: normal;
@@ -151,8 +157,8 @@ body{
 }
 
 .header ul li .contacts{
-    width: 191px;
-    height: 47px;
+    width: 160px;
+    height: 37px;
     margin-left: 41px;
     border-radius: 7px;
     background-image: linear-gradient(to right, #000000, #16542B);
@@ -174,19 +180,32 @@ body{
 
 .landing-1{
     display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: center; /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
+    margin: 60px auto; /* Centrage horizontal avec auto */
     justify-content: space-between;
-    margin: 110px 58px 0px 58px;
 }
 
 .landing-left{
+    text-align: center;
     display: flex;
     justify-content: start;
 }
 
 .landing-left-content h1{
-    font-size: 48px;
-    font-weight: 700;
-    font-style: normal;
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    font-weight: 700;  /* Utiliser un poids bold */
+    color: #333;  /* Couleur du texte */
+    letter-spacing: 1px;  /* Optionnel : espacement entre les lettres */;
+}
+
+.landing-left-content h2{
+    font-family: "Roboto Slab", serif;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .landing-left-content-subt{
@@ -201,34 +220,35 @@ body{
 }
 
 .landing-left-content .hire-btn{
-    width: 187px;
-    height: 54px;
+    width: 200px;
+    height: 35px;
     border-radius: 1000px;
-    background-color: #86B6F6;
-    margin-left: 20px;
-    margin-top: 50px;
+    background-color: #f4d4e1;
+    margin: 20px auto;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
    
 }
 
 .landing-left-content .hire-btn a{
-    color: #000;
+    color: #5d6d7e;
     font-weight: 600;
-    font-style: normal;
+    font-style: bold;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+.landing-left-content .hire-btn a:hover {
+    color: #ff6347; /* Change la couleur lors du survol */
 }
 
 .landing-left-content .hire-btn .hire-circle{
-    width: 46px;
-    height: 46px;
-    border-radius: 1000px;
-    background-color: #EEF5FF;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 6px;
+    margin-right: 15px;
     margin-left: 21px;
 }
 
@@ -246,3 +266,18 @@ body{
     width: 486px;
     height: 493px;
 }
+
+.footer {
+    position: fixed; /* Fixe le footer en bas de l'écran */
+    bottom: 0; /* Position en bas */
+    right: 0; /* Alignement à gauche */
+    font-family: 'Poppins', sans-serif; /* Police */
+    font-size: 14px; /* Taille du texte */
+    color: #5F5F5F; /* Couleur du texte */
+    font-style: italic; /* Italique */
+    padding: 10px; /* Espacement pour l'esthétique */
+    background-color: transparent; /* Fond transparent */
+    z-index: 10; /* Priorité d'affichage par rapport à d'autres éléments */
+}
+
+
